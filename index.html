@@ -79,8 +79,8 @@
     {
         let iframe = document.getElementById( "link" );
         let title = document.getElementById( "title" )
-        if ( n > channels.length ) { slideIndex = 0 }
-        if ( n < 0 ) { slideIndex = channels.length }
+        if ( n > channels.length - 1 ) { slideIndex = 0 }
+        if ( n < 0 ) { slideIndex = channels.length - 1 }
         iframe.src = channels[ slideIndex ].link;
         title.innerHTML = slideIndex + 1 + '. ' + channels[ slideIndex ].title;
     }
