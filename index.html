@@ -32,10 +32,6 @@
 <script>
     let channels = [
         {
-            title: 'Sony Pal',
-            link: "http://tvwiz.in/app/app/channelBrowse/334",
-        },
-        {
             title: 'Star Gold',
             link: "https://tvwiz.in/app/app/channelBrowse/339",
         },
@@ -86,7 +82,7 @@
         if ( n > channels.length ) { slideIndex = 0 }
         if ( n < 0 ) { slideIndex = channels.length }
         iframe.src = channels[ slideIndex ].link;
-        title.innerHTML = channels[ slideIndex ].title;
+        title.innerHTML = slideIndex + ' ' + channels[ slideIndex ].title;
     }
 
 </script>
